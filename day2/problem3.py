@@ -5,21 +5,18 @@ What is the smallest positive number that is evenly divisible by all of the numb
 """
 
 
-def is_evenly_divisible_by(
-    number: float, min_divider: float, max_divider: float
-) -> bool:
-    for i in range(int(min_divider), int(max_divider) + 1):
+def is_evenly_divisible_by(number: int, min_divider: int, max_divider: int) -> bool:
+    for i in range(min_divider, max_divider + 1):
         if number % i != 0:
             return False
 
     return True
 
 
-def solution(max_divider: float) -> float:
+def solution(max_divider: int) -> int:
     number = 2520
     while not is_evenly_divisible_by(number, 11, max_divider):
         number += 2520
-
     return number
 
 
