@@ -4,3 +4,12 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
+
+MAX_NUMBER = 1000
+total = 0
+
+for i in range(MAX_NUMBER - 1, 0, -1):
+    if i % 3 == 0 and i % 5 == 0 or i % 3 == 0 or i % 5 == 0:
+        total += i
+
+print(f"Sum of all the multiples of 3 and 5 below 1000 is {total}")
