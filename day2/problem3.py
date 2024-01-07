@@ -14,13 +14,11 @@ def is_evenly_divisible_by(number: float, max_divider: float) -> bool:
 
 
 def solution(max_divider: float) -> float:
-    number = 1
+    number = 2520
+    while not is_evenly_divisible_by(number, max_divider):
+        number += 2520
 
-    while True:
-        if is_evenly_divisible_by(number, max_divider):
-            return number
-
-        number += 1
+    return number
 
 
 if __name__ == "__main__":
