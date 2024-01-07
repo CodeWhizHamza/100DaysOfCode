@@ -7,11 +7,22 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 """
 
 
-def fib(n: int) -> int:
-    if n <= 1:
-        return n
+from typing import Dict
 
-    return fib(n - 1) + fib(n - 2)
+
+def fib(n: int) -> int:
+    cache: Dict[int, int] = {}
+
+    def fib_with_cache(n: int) -> int:
+        if n <= 1:
+            return n
+
+        cached_value = cache.get(n, None)
+        if cached_value is None:
+            cache[n] = fib_with_cache(n - 1) + fib_with_cache(n - 2)
+        return cache[n]
+
+    return fib_with_cache(n)
 
 
 def solution(max_limit: int) -> int:
