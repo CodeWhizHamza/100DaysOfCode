@@ -14,21 +14,15 @@ Find the difference between the sum of the squares of the first one hundred natu
 """
 
 
-def sum_of_squares_of(n: int) -> int:
-    total = 0
-    for i in range(n + 1):
-        total += i * i
-    return total
+def sum_of_squares_of(n: float) -> float:
+    return n * (n + 1) * (2 * n + 1) / 6
 
 
-def square_of_sum_of(n: int) -> int:
-    total = 0
-    for i in range(n + 1):
-        total += i
-    return total**2
+def square_of_sum_of(n: float) -> float:
+    return (n * (n + 1) / 2) ** 2
 
 
-def solution(n: int) -> int:
+def solution(n: float) -> float:
     return abs(square_of_sum_of(n) - sum_of_squares_of(n))
 
 
