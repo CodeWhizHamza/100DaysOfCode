@@ -15,11 +15,17 @@ Find the difference between the sum of the squares of the first one hundred natu
 
 
 def sum_of_squares_of(n: int) -> int:
-    pass
+    total = 0
+    for i in range(n + 1):
+        total += i * i
+    return total
 
 
 def square_of_sum_of(n: int) -> int:
-    pass
+    total = 0
+    for i in range(n + 1):
+        total += i
+    return total**2
 
 
 def solution(n: int) -> int:
