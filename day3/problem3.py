@@ -28,14 +28,17 @@ def solution(n: int) -> int:
     if n < 0:
         raise UnableToProcessNegativeNumbers()
 
+    if n == 1:
+        return 2
+
     number_count = 1
     current_number = 2
     current_prime_number = 0
     while True:
-        if number_count == n + 1:
+        if number_count == n:
             return current_prime_number
 
-        if is_prime(current_number):
+        if current_number % 2 != 0 and is_prime(current_number):
             current_prime_number = current_number
             number_count += 1
 
