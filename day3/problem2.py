@@ -6,7 +6,7 @@ Find the largest palindrome made from the product of 3 digit numbers.
 
 
 def is_palindrome(n: int) -> bool:
-    pass
+    return str(n)[::-1] == str(n)
 
 
 def solution(number_of_digits: int) -> int:
