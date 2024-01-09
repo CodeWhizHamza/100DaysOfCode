@@ -16,7 +16,7 @@ def solution() -> int:
     for i in range(1, 999):
         for j in range(i, 999):
             for k in range(j, 999):
-                if is_pythagorean_triplet(i, j, k) and (i + j + k) == 1000:
+                if (i + j + k) == 1000 and is_pythagorean_triplet(i, j, k):
                     return i * j * k
 
     return 0
