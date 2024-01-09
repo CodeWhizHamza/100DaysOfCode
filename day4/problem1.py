@@ -6,3 +6,15 @@ For example, 3^2 + 4^2 = 5^2
 There exists exactly one Pyatagoran triplet for which a + b + c = 1000.
 Find the product of abc
 """
+
+
+def is_pythagorean_triplet(x: int, y: int, z: int) -> bool:
+    pass
+
+
+def solution() -> int:
+    pass
+
+
+if __name__ == "__main__":
+    print(solution())
