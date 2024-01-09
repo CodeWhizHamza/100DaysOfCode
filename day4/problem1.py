@@ -9,11 +9,17 @@ Find the product of abc
 
 
 def is_pythagorean_triplet(x: int, y: int, z: int) -> bool:
-    pass
+    return x < y < z and (x**2 + y**2) == z**2
 
 
 def solution() -> int:
-    pass
+    for i in range(1, 999):
+        for j in range(1, 999):
+            for k in range(1, 999):
+                if is_pythagorean_triplet(i, j, k) and (i + j + k) == 1000:
+                    return i * j * k
+
+    return 0
 
 
 if __name__ == "__main__":
