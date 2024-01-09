@@ -11,7 +11,7 @@ def sum_of_digits(n: int) -> int:
 
 
 def solution(power: int) -> int:
-    pass
+    return sum_of_digits(2**power)
 
 
 if __name__ == "__main__":
