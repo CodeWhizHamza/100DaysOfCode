@@ -30,11 +30,29 @@ NUMBER = "7316717653133062491922511967442657474235534919493496983520312774506326
 
 
 def product(number_str: str) -> int:
-    pass
+    product = 1
+    for i in range(len(number_str)):
+        product *= int(number_str[i])
+    return product
 
 
 def solution(n: int) -> int:
-    pass
+    start = 0
+    end = n
+
+    largest_product = 0
+
+    while end < len(NUMBER):
+        numbers_window = NUMBER[start:end]
+
+        result = product(numbers_window)
+        if result > largest_product:
+            largest_product = result
+
+        start += 1
+        end += 1
+
+    return largest_product
 
 
 if __name__ == "__main__":
