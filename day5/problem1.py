@@ -6,7 +6,8 @@ What is the sum of the digits of 2^1000
 
 
 def sum_of_digits(n: int) -> int:
-    pass
+    digits = [int(digit) for digit in str(n)]
+    return sum(digits)
 
 
 def solution(power: int) -> int:
