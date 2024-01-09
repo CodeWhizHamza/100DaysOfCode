@@ -15,9 +15,9 @@ def is_pythagorean_triplet(x: int, y: int, z: int) -> bool:
 def solution() -> int:
     for i in range(1, 999):
         for j in range(i, 1000 - i + 1):
-            for k in range(j, 1000 - i - j + 1):
-                if (i + j + k) == 1000 and is_pythagorean_triplet(i, j, k):
-                    return i * j * k
+            k = 1000 - i - j
+            if is_pythagorean_triplet(i, j, k):
+                return i * j * k
 
     return 0
 
