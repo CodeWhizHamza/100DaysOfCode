@@ -8,22 +8,12 @@ Project Euler is a series of challenging mathematical/computer programming probl
 
 You can find the problems and more information about Project Euler on their official website: [Project Euler](https://projecteuler.net/)
 
-## Structure
+## Solutions
 
-Each problem solution is organized in a separate directory, named after the problem number. Inside each directory, you will find the solution code, along with any necessary input files or additional resources.
-
-## Getting Started
-
-To get started with this repository, follow these steps:
-
-1. Clone the repository to your local machine.
-2. Navigate to the specific problem directory you want to explore.
-3. Open the solution code in your preferred programming language.
-4. Run the code and verify the solution.
-
-## Contributing
-
-Contributions to this repository are welcome! If you have a different approach or an optimized solution to any of the problems, feel free to open a pull request. Please make sure to follow the existing code style and provide a clear explanation of your changes.
+| PROBLEM                                         | SOLUTION                         |
+| ----------------------------------------------- | -------------------------------- |
+| [Problem 1](https://projecteuler.net/problem=1) | [Solution 1](./day1/solution.py) |
+| [Problem 2](https://projecteuler.net/problem=2) | [Solution 2](./day2/problem1.py) |
 
 ## License
 
