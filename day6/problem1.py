@@ -16,11 +16,11 @@ def factorial(number: int) -> int:
 
 
 def sum_of_digits(number: int) -> int:
-    pass
+    return sum([int(digit) for digit in str(number)])
 
 
 def solution(number: int) -> int:
-    pass
+    return sum_of_digits(factorial(number))
 
 
 if __name__ == "__main__":
