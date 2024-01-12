@@ -3,9 +3,6 @@ PROBLEM: Highly Divisible Triangular Number
 """
 
 
-from math import ceil, sqrt
-
-
 def number_of_factors(number: int) -> int:
     if number <= 1:
         return 1
@@ -19,8 +16,16 @@ def number_of_factors(number: int) -> int:
     return count
 
 
-def solution(number_of_factors: int) -> int:
-    pass
+def solution(factors_count: int) -> int:
+    triangular_number = 1
+    current_natural_number = 2
+
+    while True:
+        if number_of_factors(triangular_number) > factors_count:
+            return triangular_number
+
+        triangular_number += current_natural_number
+        current_natural_number += 1
 
 
 if __name__ == "__main__":
