@@ -13,4 +13,4 @@ def sum_of_digits():
 
 def test_solution():
     assert solution(10) == 27
-    assert solution(100) == 123
+    assert solution(100) == 648
