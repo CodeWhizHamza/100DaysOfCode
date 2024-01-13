@@ -3,29 +3,38 @@ PROBLEM: Highly Divisible Triangular Number
 """
 
 
-def number_of_factors(number: int) -> int:
-    if number <= 1:
+def tau(num):
+    n = num
+    i = 2
+    p = 1
+
+    if num == 1:
         return 1
 
-    count = 2  # 1 and the number are included
+    while i * i <= n:
+        c = 1
+        while n % i == 0:
+            n /= i
+            c += 1
 
-    for i in range(2, number // 2 + 1):
-        if number % i == 0:
-            count += 1
+        i += 1
+        p *= c
 
-    return count
+    if n == num or n > 1:
+        p *= 1 + 1
+
+    return p
 
 
-def solution(factors_count: int) -> int:
-    triangular_number = 1
-    current_natural_number = 2
+def solution(x):
+    n = 1
+    d = 1
 
-    while True:
-        if number_of_factors(triangular_number) > factors_count:
-            return triangular_number
+    while tau(d) <= x:
+        n += 1
+        d += n
 
-        triangular_number += current_natural_number
-        current_natural_number += 1
+    return d
 
 
 if __name__ == "__main__":
