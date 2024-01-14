@@ -26,6 +26,8 @@ def solution(n: int, verbose: bool = True) -> int:
 
         i += 1
 
+    if verbose:
+        print(f"Index of fib number with {n} digits is {i}")
     return i
 
 
