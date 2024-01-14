@@ -14,3 +14,21 @@ def fib(n: int) -> int:
         first = temp
 
     return second
+
+
+def solution(n: int, verbose: bool = True) -> int:
+    i = 1
+    while True:
+        number = fib(i)
+
+        if len(str(number)) == n:
+            break
+
+        i += 1
+
+    return i
+
+
+if __name__ == "__main__":
+    solution(3)
+    solution(1000)
