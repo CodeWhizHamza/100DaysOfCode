@@ -12,16 +12,21 @@ def sum_of_n_power_n(n: int) -> int:
     return total
 
 
-def get_first_10_digits(n: int) -> int:
+def get_last_10_digits(n: int) -> int:
     n_str = str(n)
 
     if len(n_str) <= 10:
         return n
 
-    return int(n_str[:10])
+    return int(n_str[-10:])
 
 
 def solution(n: int) -> int:
     number = sum_of_n_power_n(n)
-    first_digits = get_first_10_digits(number)
+    first_digits = get_last_10_digits(number)
     return first_digits
+
+
+if __name__ == "__main__":
+    print(solution(10))
+    print(solution(1000))
