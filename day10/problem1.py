@@ -33,8 +33,22 @@ def is_sum_of_two_abundant_numbers(n: int) -> bool:
     return False
 
 
+def solution() -> int:
+    UPPER_LIMIT = 28123
+    all_abundant_numbers = set()
+
+    for i in range(1, UPPER_LIMIT):
+        if is_abundant(i):
+            all_abundant_numbers.add(i)
+
+    total = 0
+
+    for i in range(1, UPPER_LIMIT):
+        if not any((i - a in all_abundant_numbers) for a in all_abundant_numbers):
+            total += i
+
+    return total
+
+
 if __name__ == "__main__":
-    print(is_sum_of_two_abundant_numbers(1))
-    print(is_sum_of_two_abundant_numbers(16))
-    print(is_sum_of_two_abundant_numbers(12))
-    print(is_sum_of_two_abundant_numbers(24))
+    print(solution())
