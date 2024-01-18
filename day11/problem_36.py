@@ -19,7 +19,10 @@ def solution(high_limit: int) -> int:
 
     for i in range(1, high_limit):
         if is_palindrome(i) and is_palindrome(bin(i)[2:]):
-            print(i)
             total += i
 
     return total
+
+
+if __name__ == "__main__":
+    print(solution(1_000_000))
