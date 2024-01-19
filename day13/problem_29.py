@@ -9,15 +9,15 @@ How many combination can be made for this exacty sequence, if lower_limit is 2 a
 from typing import Set
 
 
-def solution() -> int:
+def solution(lower_limit: int, upper_limit: int) -> int:
     numbers: Set[int] = set()
 
-    for i in range(2, 101):
-        for j in range(2, 101):
+    for i in range(lower_limit, upper_limit + 1):
+        for j in range(lower_limit, upper_limit + 1):
             numbers.add(i**j)
 
     return len(numbers)
 
 
 if __name__ == "__main__":
-    print(solution())
+    print(solution(2, 100))
