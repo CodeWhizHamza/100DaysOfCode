@@ -20,3 +20,7 @@ We consider an <b>open</b> <b>oriented</b> <b>line</b> <b>section</b> U of A wit
 Define f(m, p) as the maximal possible discriminant of the <b>jacobian</b> associated to the <b>orthogonal</b> <b>kernel</b> <b>embedding</b> of U into A.
 
 Find f(20230401, 57). Give as your answer the concatenation of the first letters of each bolded word."""
+
+
+if __name__ == "__main__":
+    f(20230401, 57)
