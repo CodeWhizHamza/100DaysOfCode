@@ -1,4 +1,4 @@
-from problem1 import solution, is_pythagorean_triplet
+from day4.problem_9 import solution, is_pythagorean_triplet
 
 
 def test_is_pythagorean_triplet():

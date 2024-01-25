@@ -1,4 +1,4 @@
-from problem3 import solution, is_prime
+from day4.problem_10 import solution, is_prime
 
 
 def test_is_prime():
