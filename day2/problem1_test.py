@@ -1,4 +1,4 @@
-from problem1 import fib, solution
+from day2.problem_2 import fib, solution
 
 
 def test_fib():
