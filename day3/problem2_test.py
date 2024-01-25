@@ -1,4 +1,4 @@
-from problem2 import is_palindrome, solution
+from day3.problem_4 import is_palindrome, solution
 
 
 def test_is_palindrome():
