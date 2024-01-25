@@ -1,4 +1,4 @@
-from problem3 import solution
+from day6.problem_14 import solution
 
 
 def test_solution():

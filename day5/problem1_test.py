@@ -1,4 +1,4 @@
-from problem1 import solution, sum_of_digits
+from day5.problem_16 import solution, sum_of_digits
 
 
 def test_sum_of_digits():

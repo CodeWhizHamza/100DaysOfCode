@@ -2,6 +2,8 @@ from functools import reduce
 from operator import mul
 from typing import List
 
+# Problem: Largest product in a grid
+
 
 def horizontal(grid: List[List[int]], run_len: int) -> int:
     """Find the maximal `run_len` long product in the horizontal direction

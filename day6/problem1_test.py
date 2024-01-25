@@ -1,4 +1,4 @@
-from problem1 import factorial, solution, sum_of_digits
+from day6.problem_20 import factorial, solution, sum_of_digits
 
 
 def test_factorial():
